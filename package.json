@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "js": "browserify -d -e src/js/index.js -o dist/js/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/dperuo/wipro-digital/issues"
   },
-  "homepage": "https://github.com/dperuo/wipro-digital#readme"
+  "homepage": "https://github.com/dperuo/wipro-digital#readme",
+  "devDependencies": {
+    "browserify": "13.0.0"
+  }
 }

@@ -1,12 +1,18 @@
-all: dist/js/bundle.min.js dist/css/bundle.min.css
+JSOUT  := dist/js/bundle.js
+JSIN   := src/js/index.js
+CSSOUT := dist/css/bundle.css
+CSSIN  := src/css/index.css
 
-dist/js/bundle.min.js: src/js/index.js
-	cp $^ $@
 
-dist/css/bundle.min.css: src/css/index.css
+all: $(JSOUT) $(CSSOUT)
+
+$(JSOUT): $(JSIN)
+	npm run js
+
+$(CSSOUT): $(CSSIN)
 	cp $^ $@
 
 clean:
-	$(RM) dist/js/bundle.min.js dist/css/bundle.min.css
+	$(RM) $(JSOUT) $(CSSOUT)
 
 .PHONY: clean

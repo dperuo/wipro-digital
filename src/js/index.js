@@ -6,4 +6,5 @@ function ctrl() {
   var vm = this;
 
   vm.hello = 'world';
+  vm.array = [1, 2, 3, 0, 4, 5];
 }
