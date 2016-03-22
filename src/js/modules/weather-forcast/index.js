@@ -1,4 +1,4 @@
-var template = require('./template');
+var template = require('./template.html');
 
 angular
   .module('weatherForcast', [])
@@ -11,7 +11,7 @@ function weatherForcast() {
     scope: {},
     template: template,
     link: function(scope, elem, attr, ctrl) {
-
+      // stuff...
     }
   }
 }
