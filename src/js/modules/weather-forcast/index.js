@@ -17,7 +17,9 @@ function weatherForcast(weatherService) {
     link: function(scope, elem, attr, ctrl) {
       var vm = scope;
 
-      console.log(weatherService.get())
+      weatherService.get().then(function(response) {
+        console.log(response.data)
+      })
 
       vm.array = [1, 2, 3, 0, 4, 5];
     }

@@ -1,9 +1,18 @@
-weatherService.$inject = ['$http'];
+weatherService.$inject = ['$q', '$http'];
 
-function weatherService($http) {
+function weatherService($q, $http) {
   return {
     get: function() {
-      return 'Hello from the weatherService!'
+      return $q(function(resolve, reject) {
+        $http
+          .get('https://api.github.com/emojis')
+          .then(function(success) {
+            resolve(success);
+          },
+          function(error) {
+            reject(error)
+          })
+      })
     }
   }
 }
