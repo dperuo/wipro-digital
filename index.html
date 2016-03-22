@@ -18,17 +18,23 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body ng-controller="ctrl as ctrl">
-    <h1>Hello, world!</h1>
 
-    <h2>1 + 2 = {{ 1 + 2 }}</h2>
+  <body ng-controller="ctrl as ctrl" ng-cloak>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <h1>Weather Forcast</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h2>1 + 2 = {{ 1 + 2 }}</h2>
+        </div>
+      </div>
+    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js" charset="utf-8"></script>
     <script src="dist/js/bundle.min.js" charset="utf-8"></script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- Latest compiled and minified JavaScript -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
   </body>
 </html>
