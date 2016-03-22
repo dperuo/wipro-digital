@@ -1,5 +1,9 @@
-var ctrl = require('./ctrl');
+var weatherForcast = require('./modules/weather-forcast');
 
 angular
-  .module('app', [])
+  .module('app', [
+    'weatherForcast'
+  ])
   .controller('ctrl', ctrl);
+
+function ctrl() {};
