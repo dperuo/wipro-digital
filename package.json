@@ -7,8 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "js": "browserify -d -e src/js/index.js -o dist/js/bundle.js"
+    "build": "npm run js",
+    "js": "browserify -d -e src/js/index.js -o dist/js/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
