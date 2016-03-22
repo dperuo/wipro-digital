@@ -8,8 +8,8 @@
   },
   "scripts": {
     "build": "npm run js",
-    "dev": "webpack --progress --colors --watch",
-    "js": "webpack --progress --colors",
+    "dev": "webpack --progress --colors --optimize-minimize --watch",
+    "js": "webpack --progress --colors --optimize-minimize",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npm run dev"
   },
