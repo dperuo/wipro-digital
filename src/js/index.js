@@ -1,4 +1,4 @@
-var weatherForcast = require('./modules/weather-forcast');
+require('./modules/weather-forcast');
 
 angular
   .module('app', [
