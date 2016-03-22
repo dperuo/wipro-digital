@@ -11,7 +11,9 @@ function weatherForcast() {
     scope: {},
     template: template,
     link: function(scope, elem, attr, ctrl) {
-      // stuff...
+      var vm = scope;
+
+      vm.array = [1, 2, 3, 0, 4, 5];
     }
   }
 }

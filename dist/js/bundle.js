@@ -72,7 +72,9 @@
 	    scope: {},
 	    template: template,
 	    link: function(scope, elem, attr, ctrl) {
+	      var vm = scope;
 
+	      vm.array = [1, 2, 3, 0, 4, 5];
 	    }
 	  }
 	}
@@ -82,7 +84,7 @@
 /* 2 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"weather-forcast\">\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <h1>Weather Forcast</h1>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <h2>1 + 2 = {{ 1 + 2 }}</h2>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "<div class=\"weather-forcast\">\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <h1>Local Weather Forcast</h1>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <span ng-repeat=\"item in array\">{{ item }}<span ng-if=\"!$last\"> | </span></span>\n    </div>\n  </div>\n</div>\n";
 
 /***/ }
 /******/ ]);
