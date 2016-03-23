@@ -1,8 +1,10 @@
+$amount: 15px;
+
 .media:first-child {
-  margin-top: 15px;
+  margin-top: $amount;
 }
 
 .media + .media {
   border-top: 1px solid silver;
-  padding-top: 15px;
+  padding-top: $amount;
 }
