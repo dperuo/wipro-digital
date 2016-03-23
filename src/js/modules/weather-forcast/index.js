@@ -16,28 +16,21 @@ function weatherForcast(weatherService) {
     template: template,
     link: function(scope, elem, attr, ctrl) {
       var vm = scope;
+      vm.showWeather = false;
+      vm.locale = false;
 
-      vm.getWeather = function(weatherSearch) {
-        vm.locale = weatherSearch;
+      vm.getWeather = function() {
+        vm.showWeather = false;
+        vm.locale = false;
+
+        weatherService.get({
+          city: vm.search,
+        }).then(function(response) {
+          vm.locale = vm.search;
+          vm.weather = response.data;
+          vm.showWeather = true;
+        })
       }
-
-
-      // if (navigator.geolocation) {
-      //   navigator.geolocation.getCurrentPosition(function(position){
-      //     scope.$apply(function(){
-      //       vm.lat = position.coords.latitude;
-      //       vm.lon = position.coords.longitude;
-      //
-      //       weatherService.get({
-      //         lat: vm.lat,
-      //         lon: vm.lon
-      //       }).then(function(response) {
-      //         vm.hasGeoLocation = true;
-      //         vm.weather = response.data;
-      //       })
-      //     });
-      //   });
-      // }
     }
   }
 }

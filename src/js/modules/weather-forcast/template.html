@@ -2,11 +2,11 @@
   <div class="row">
     <div class="col-xs-10">
       <h1>Weather Forcast<span ng-show="locale"> for {{locale}}</span></h1>
-      <form ng-submit="getWeather(weatherSearch)">
+      <form ng-submit="getWeather()">
         <div class="input-group">
-          <input type="text" class="form-control" ng-model="weatherSearch" placeholder="Search by U.S. City">
+          <input type="text" class="form-control" ng-model="search" placeholder="Search by U.S. City">
           <span class="input-group-btn">
-            <button class="btn btn-default" type="submit" ng-click="getWeather(weatherSearch)">Go!</button>
+            <button class="btn btn-default" type="submit" ng-click="getWeather()">Go!</button>
           </span>
         </div>
 
@@ -14,8 +14,10 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12">
-      <span ng-repeat="item in array">{{ item }}<span ng-if="!$last"> | </span></span>
+    <div class="col-xs-10">
+      <div class="" ng-show="showWeather">
+        <pre style="background-color: magenta;">{{ weather | json }}</pre>
+      </div>
     </div>
   </div>
 </div>
