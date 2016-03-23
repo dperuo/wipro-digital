@@ -8,10 +8,13 @@
   },
   "scripts": {
     "build": "npm run js",
-    "dev": "webpack --progress --colors --optimize-minimize --watch",
-    "js": "webpack --progress --colors --optimize-minimize",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "npm run dev"
+
+    "watch:js": "webpack --progress --colors --optimize-minimize --watch",
+    "build:js": "webpack --progress --colors --optimize-minimize",
+
+    "build:css": "node-sass --output-style compressed --source-map-embed src/css/index.scss -o dist/css && mv dist/css/index.css dist/css/bundle.min.css",
+
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -24,8 +27,9 @@
   },
   "homepage": "https://github.com/dperuo/wipro-digital#readme",
   "devDependencies": {
-    "html-loader": "^0.4.3",
-    "moment": "^2.12.0",
-    "webpack": "^1.12.14"
+    "html-loader": "0.4.3",
+    "moment": "2.12.0",
+    "node-sass": "3.4.2",
+    "webpack": "1.12.14"
   }
 }
