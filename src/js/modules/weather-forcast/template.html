@@ -9,14 +9,13 @@
             <button class="btn btn-default" type="submit" ng-click="getWeather()">Go!</button>
           </span>
         </div>
-
       </form>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-10">
       <div class="" ng-show="showWeather">
-        <pre style="background-color: magenta;">{{ weather | json }}</pre>
+        <pre ng-repeat="item in weather.list" style="background-color: magenta;">{{ item.dt_txt | moment : {output:'hh:mma'} }}</pre>
       </div>
     </div>
   </div>

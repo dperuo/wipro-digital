@@ -7,7 +7,7 @@ function weatherService($q, $http) {
    *
    * @param {Object} config - Configuration object.
    *
-   * @property {String} config.city - City
+   * @property {String} config.city - City name
    */
 
   return {

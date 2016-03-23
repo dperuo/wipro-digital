@@ -28,6 +28,7 @@ function weatherForcast(weatherService) {
         }).then(function(response) {
           vm.locale = vm.search;
           vm.weather = response.data;
+          console.log(vm.weather);
           vm.showWeather = true;
         })
       }
