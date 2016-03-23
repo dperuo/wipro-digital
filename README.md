@@ -9,7 +9,7 @@ You should:
 * Ensure your code works on the following browsers (only needs to support the last two major versions for each browser):
   - [x] Safari
   - [x] Chrome
-  - [ ] Firefox
+  - [x] Firefox
   - [ ] Internet Explorer
 * Produce a responsive page
 * Please ensure that what you do implement is good quality code using engineering best practices and runs without any bugs, crashes or issues.
