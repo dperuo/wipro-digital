@@ -1,4 +1,5 @@
 require('./modules/weather-forcast');
+
 var moment = require('./filters/moment');
 
 angular

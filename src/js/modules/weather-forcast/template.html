@@ -15,7 +15,43 @@
   <div class="row">
     <div class="col-xs-10">
       <div class="" ng-show="showWeather">
-        <pre ng-repeat="item in weather.list" style="background-color: magenta;">{{ item.dt_txt | moment : {output:'hh:mma'} }}</pre>
+        <ul class="media-list">
+          <li class="media" ng-repeat="item in weather.list">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object" ng-src="http://openweathermap.org/img/w/{{item.weather[0].icon}}.png" alt="{{item.weather[0].description}}">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">{{ item.dt_txt | moment : {output:'M/DD'} }} {{ item.dt_txt | moment : {output:'h:mma'} }}</h4>
+              {{ item.main.temp | number:1}}&deg; {{item.weather[0].main}}
+            </div>
+          </li>
+        </ul>
+
+
+
+<!--
+        <div class="media" >
+          <div class="media-left" >
+            <a href="#">
+              <img class="media-object" ng-src="http://openweathermap.org/img/w/{{item.weather[0].icon}}.png" alt="{{item.weather[0].description}}">
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">{{item.weather[0].main}} @ {{ item.main.temp | number:1}}&deg;</h4>
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+          </div>
+        </div> -->
+
+
+        <!-- <ul> -->
+          <!-- <li > -->
+            <!-- {{ item.dt_txt | moment : {output:'M/DD'} }} ~ -->
+            <!-- {{ item.dt_txt | moment : {output:'h:mma'} }} ~ -->
+            <!-- {{ item.main.temp | number:1}}&deg; with {{item.weather[0].description}} -->
+          <!-- </li> -->
+        <!-- </ul> -->
       </div>
     </div>
   </div>

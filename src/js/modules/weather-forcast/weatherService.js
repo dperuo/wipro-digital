@@ -17,7 +17,8 @@ function weatherService($q, $http) {
           .get('http://api.openweathermap.org/data/2.5/forecast', {
             params: {
               APPID: '0f515d7723e2c5ddec881b8ff0004c38',
-              q: config.city + ',us'
+              q: config.city + ',us',
+              units: 'imperial',
             }
           })
           .then(function(success) {

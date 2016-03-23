@@ -26,8 +26,10 @@ function weatherForcast(weatherService) {
         weatherService.get({
           city: vm.search,
         }).then(function(response) {
-          vm.locale = vm.search;
-          vm.weather = response.data;
+          var data = response.data;
+
+          vm.weather = data;
+          vm.locale = data.city.name;
           console.log(vm.weather);
           vm.showWeather = true;
         })
