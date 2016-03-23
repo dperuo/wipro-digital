@@ -1,7 +1,14 @@
 var moment = require('moment');
 
 module.exports = function() {
-  return function (input, format) {
-    return input ? moment.utc(input, format.input).format(format.output) : '';
+
+  /**
+   * @param {Object} config - Configuration object.
+   * @property {String} config.input - input format.
+   * @property {String} config.output - output format.
+   */
+
+  return function(input, config) {
+    return input ? moment.utc(input, config.input).format(config.output) : '';
   };
 }
