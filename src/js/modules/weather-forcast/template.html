@@ -24,7 +24,8 @@
             </div>
             <div class="media-body">
               <h4 class="media-heading">{{ item.dt_txt | moment : {output:'M/DD'} }} {{ item.dt_txt | moment : {output:'h:mma'} }}</h4>
-              {{ item.main.temp | number:1}}&deg; {{item.weather[0].main}}
+              {{ item.main.temp | number:1}}&deg; {{item.weather[0].main}}<br/>
+              <strong>Humidity:</strong> {{item.main.humidity}}%
             </div>
           </li>
         </ul>
