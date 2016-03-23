@@ -3,6 +3,11 @@
 $media-spacing: 15px !default;
 $media-spacing-style: 1px solid silver !default;
 
+footer {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
 .media + .media {
   border-left: $media-spacing-style;
 
