@@ -10,7 +10,7 @@ You should:
   - [x] Safari
   - [x] Chrome
   - [x] Firefox
-  - [ ] Internet Explorer
+  - [x] Internet Explorer
 * Produce a responsive page
 * Please ensure that what you do implement is good quality code using engineering best practices and runs without any bugs, crashes or issues.
 * Be prepared to discuss any tradeoffs you make.
