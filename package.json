@@ -7,14 +7,11 @@
     "test": "test"
   },
   "scripts": {
-    "build": "npm run build:js && npm run build:css",
-
-    "watch:js": "webpack --progress --colors --optimize-minimize --watch",
-    "build:js": "webpack --progress --colors --optimize-minimize",
-
     "build:css": "node-sass --output-style compressed --source-map-embed src/css/index.scss -o dist/css && mv dist/css/index.css dist/css/bundle.min.css",
-
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:js": "webpack --progress --colors --optimize-minimize",
+    "build": "npm run build:js && npm run build:css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:js": "webpack --progress --colors --optimize-minimize --watch"
   },
   "repository": {
     "type": "git",
