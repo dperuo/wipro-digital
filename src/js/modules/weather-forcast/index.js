@@ -17,11 +17,27 @@ function weatherForcast(weatherService) {
     link: function(scope, elem, attr, ctrl) {
       var vm = scope;
 
-      weatherService.get().then(function(response) {
-        console.log(response.data)
-      })
+      vm.getWeather = function(weatherSearch) {
+        vm.locale = weatherSearch;
+      }
 
-      vm.array = [1, 2, 3, 0, 4, 5];
+
+      // if (navigator.geolocation) {
+      //   navigator.geolocation.getCurrentPosition(function(position){
+      //     scope.$apply(function(){
+      //       vm.lat = position.coords.latitude;
+      //       vm.lon = position.coords.longitude;
+      //
+      //       weatherService.get({
+      //         lat: vm.lat,
+      //         lon: vm.lon
+      //       }).then(function(response) {
+      //         vm.hasGeoLocation = true;
+      //         vm.weather = response.data;
+      //       })
+      //     });
+      //   });
+      // }
     }
   }
 }
