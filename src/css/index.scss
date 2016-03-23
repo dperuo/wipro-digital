@@ -1,10 +1,24 @@
-$amount: 15px;
+@import "_breakpoints";
 
-.media:first-child {
-  margin-top: $amount;
-}
+$media-spacing: 15px !default;
+$media-spacing-style: 1px solid silver !default;
 
 .media + .media {
-  border-top: 1px solid silver;
-  padding-top: $amount;
+  border-left: $media-spacing-style;
+
+  @media (max-width: $screen-xs-max) {
+    padding-top: $media-spacing;
+    border-top: $media-spacing-style;
+    border-left: none;
+  }
+}
+
+.media:first-child {
+  margin-top: $media-spacing;
+}
+
+.media:nth-child(3n+1) {
+  @media (min-width: $screen-xs-max) {
+    border-left: none;
+  }
 }

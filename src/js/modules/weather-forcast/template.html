@@ -18,7 +18,7 @@
     <div class="col-xs-12">
       <div class="" ng-show="showWeather">
         <ul class="media-list">
-          <li class="media" ng-repeat="item in weather.list">
+          <li class="col-sm-4 media" ng-repeat="item in weather.list">
             <div class="media-left">
               <a href="#">
                 <img class="media-object" ng-src="http://openweathermap.org/img/w/{{item.weather[0].icon}}.png" alt="{{item.weather[0].description}}">
