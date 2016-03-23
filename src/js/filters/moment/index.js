@@ -9,6 +9,6 @@ module.exports = function() {
    */
 
   return function(input, config) {
-    return input ? moment.utc(input, config.input).format(config.output) : '';
+    return (input) ? moment.utc(input, config.input).format(config.output) : '';
   };
 }

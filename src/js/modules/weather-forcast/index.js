@@ -27,10 +27,8 @@ function weatherForcast(weatherService) {
           city: vm.search,
         }).then(function(response) {
           var data = response.data;
-
           vm.weather = data;
           vm.locale = data.city.name;
-          console.log(vm.weather);
           vm.showWeather = true;
         })
       }
