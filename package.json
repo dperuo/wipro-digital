@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "npm run js",
+    "build": "npm run build:js && npm run build:css",
 
     "watch:js": "webpack --progress --colors --optimize-minimize --watch",
     "build:js": "webpack --progress --colors --optimize-minimize",
