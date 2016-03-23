@@ -6,7 +6,11 @@ You should:
 
 * Use the API to retrieve the current 5 day weather forecast in JSON and render it on the page.
 * Give some thought to what will make for a decent user experience, but with no need to go all out on sleek and flashy UI elements.
-* Ensure your code works on the following browsers (only needs to support the last two major versions for each browser): Safari, Chrome, Firefox and Internet Explorer.
+* Ensure your code works on the following browsers (only needs to support the last two major versions for each browser):
+  - [ ] Safari
+  - [ ] Chrome
+  - [ ] Firefox
+  - [ ] Internet Explorer.
 * Produce a responsive page
 * Please ensure that what you do implement is good quality code using engineering best practices and runs without any bugs, crashes or issues.
 * Be prepared to discuss any tradeoffs you make.
